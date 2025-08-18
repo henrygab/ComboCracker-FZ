@@ -42,7 +42,6 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: ${{ steps.build-app.outputs.fap-artifacts }}
-          overwrite_files: false
           name: Release ${{ github.event.inputs.tag-name }}
           tag_name: ${{ github.event.inputs.tag-name }}
           target_commitish: ${{ github.event.inputs.commitish }}
